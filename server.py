@@ -43,7 +43,7 @@ def say_hello():
         <h1>Hi There!</h1>
         <form action="/greet" method='GET'>
           What's your name? <input type="text" name="person">
-          What compliment would you like?
+          What compliment would you like? <br>
           <input type="radio" name="compliment" value="awesome">Awesome<br>
           <input type="radio" name="compliment" value="terrific">Terrific<br>
           <input type="radio" name="compliment" value="fantastic">Fantastic<br>
@@ -88,4 +88,4 @@ def greet_person():
 if __name__ == '__main__':
     # debug=True gives us error messages in the browser and also "reloads"
     # our web app if we change the code.
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
